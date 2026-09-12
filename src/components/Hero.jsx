@@ -92,7 +92,7 @@ export default function Hero({ onPlayBell, isCurtainOpen }) {
             <img src="/assets/lotus-C9mPCXs6.webp" alt="" className="seal-lotus-img" />
           </div>
           <p className="seal-message">
-            आपण सर्वांनी सहकुटुंब, सहपरिवार येऊन बाप्पाचं दर्शन घेऊन प्रसादाचा लाभ घ्यावा ही मनःपूर्वक विनंती.
+            आपण सर्वांनी सहकुटुंब, सहपरिवार येऊन बाप्पाचं दर्शन घ्यावे ही मनःपूर्वक विनंती.
           </p>
         </div>
         <img src="/assets/divider-2-B5AQ9qpj.webp" className="family-divider" alt="" />

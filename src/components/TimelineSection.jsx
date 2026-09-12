@@ -23,7 +23,7 @@ const aayojanEvents = [
   {
     id: 'darshan',
     icon: '/assets/snehbhet-opt-CGz7vv-w.webp',
-    title: 'दर्शन व प्रसाद लाभ',
+    title: 'श्री गणेश दर्शन',
     date: 'दररोज (१४ ते १८ सप्टेंबर)',
     time: 'दिवसभरात कधीही',
     side: 'left',

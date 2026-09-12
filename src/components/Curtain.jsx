@@ -21,6 +21,11 @@ export default function Curtain({ isOpen, onOpen, onOpenStart }) {
 
   const handleOpen = () => {
     setIsOpening(true);
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
     if (onOpenStart) onOpenStart();
     if (onOpen) onOpen();
 
@@ -28,6 +33,11 @@ export default function Curtain({ isOpen, onOpen, onOpenStart }) {
     setTimeout(() => {
       document.body.style.overflow = '';
       document.documentElement.style.overflow = '';
+      if (typeof window !== 'undefined') {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
     }, 800);
 
     setTimeout(() => {

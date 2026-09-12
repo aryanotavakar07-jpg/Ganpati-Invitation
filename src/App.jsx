@@ -17,6 +17,18 @@ export default function App() {
   const bellAudioCtxRef = useRef(null);
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+    scrollToTop();
+    const t1 = setTimeout(scrollToTop, 50);
+    const t2 = setTimeout(scrollToTop, 200);
+
     const audio = new Audio('/assets/bgMusic-Cx9Z66jg.mp3');
     audio.loop = false;
     bgAudioRef.current = audio;
@@ -34,6 +46,8 @@ export default function App() {
     audio.addEventListener('ended', handleEnded);
 
     return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
       audio.removeEventListener('ended', handleEnded);
       audio.pause();
     };
@@ -44,6 +58,9 @@ export default function App() {
   }, []);
 
   const handleOpenCurtain = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     setIsCurtainOpen(true);
     setIsAudioPlaying(true);
     playCountRef.current = 0;

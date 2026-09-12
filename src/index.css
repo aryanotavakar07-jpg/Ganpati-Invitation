@@ -197,8 +197,8 @@
    UNIVERSAL RESPONSIVE DESIGN SYSTEM (ALL DEVICES: 320px to 2560px+)
    ========================================================================== */
 
-/* Base Global Reset for Zero Horizontal Overflow */
-html, body { width: 100%; max-width: 100vw; overflow-x: hidden !important; margin: 0; padding: 0; }
+/* Base Global Reset for Zero Horizontal Overflow & Instant Top Scroll */
+html, body { width: 100%; max-width: 100vw; overflow-x: hidden !important; margin: 0; padding: 0; scroll-behavior: auto !important; }
 .app-container, main { width: 100%; max-width: 100vw; overflow-x: hidden; }
 
 /* Base Bell Z-Index & Visibility Override */
@@ -206,105 +206,105 @@ html, body { width: 100%; max-width: 100vw; overflow-x: hidden !important; margi
 
 /* --- 1. ULTRA-SMALL MOBILE DEVICES (320px to 374px: iPhone SE, Galaxy Fold, etc.) --- */
 @media screen and (max-width: 374px) {
-  .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 10px 8px 10px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
+  .hero { height: auto !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 10px 8px 10px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
   .toplayer { width: 140% !important; top: -15px !important; z-index: 50 !important; }
-  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(170px, 46vw, 210px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 15 !important; pointer-events: none !important; }
-  .pillar.left { left: -65px !important; }
-  .pillar.right { right: -65px !important; transform: scaleX(-1) !important; }
-  .bell-left { left: 30px !important; top: 58px !important; width: 44px !important; }
-  .bell-right { right: 30px !important; top: 58px !important; width: 40px !important; }
-  .hero-content { max-width: 310px !important; width: 100% !important; margin: 0 auto !important; padding-top: 15px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; height: 100% !important; z-index: 10 !important; }
-  .logo { width: 36px !important; margin-bottom: 4px !important; }
-  .shlok { font-size: 12px !important; margin-bottom: 4px !important; color: #8c5a2b !important; }
-  .title { font-size: clamp(34px, 10vw, 46px) !important; line-height: 1.1 !important; margin-bottom: 6px !important; text-align: center !important; color: #4a2311 !important; }
-  .subtitle { font-size: 13px !important; line-height: 1.4 !important; margin-bottom: 10px !important; text-align: center !important; color: #8c5a2b !important; }
-  .hero-shrine { margin-top: 5px !important; padding-bottom: 15px !important; display: flex !important; justify-content: center !important; align-items: flex-end !important; position: relative !important; z-index: 10 !important; }
-  .murti { width: clamp(210px, 64vw, 265px) !important; max-height: 44vh !important; object-fit: contain !important; filter: drop-shadow(0 15px 30px rgba(91,38,7,0.45)) !important; }
-  .inviter-seal { padding: 22px 12px !important; border-radius: 30px !important; width: 96% !important; }
-  .seal-text { font-size: 0.85rem !important; }
-  .seal-family-name { font-size: 1.15rem !important; margin-bottom: 15px !important; }
-  .seal-message { font-size: 0.85rem !important; line-height: 1.5 !important; }
-  .family-heading { font-size: 1rem !important; }
-  .family-heading-wrapper { padding: 10px 14px !important; }
-  .family-heading-wrapper .flourish { width: 35px !important; }
-  .family-heading-wrapper .flourish.left { left: -15px !important; }
-  .family-heading-wrapper .flourish.right { right: -15px !important; }
-  .family-card { width: 85vw !important; max-width: 270px !important; padding: 10px !important; }
-  .member-name span { font-size: 1.1rem !important; }
-  .aayojan-timeline { max-width: 310px !important; }
-  .aayojan-card { width: 135px !important; padding: 12px 6px !important; border-radius: 12px !important; }
-  .aayojan-card-title { font-size: 0.95rem !important; }
-  .aayojan-card-date { font-size: 0.85rem !important; }
-  .aayojan-card-time { font-size: 0.75rem !important; }
+  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(100px, 28vw, 135px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 15 !important; pointer-events: none !important; }
+  .pillar.left { left: -38px !important; }
+  .pillar.right { right: -38px !important; transform: scaleX(-1) !important; }
+  .bell-left { left: 20px !important; top: 48px !important; width: 34px !important; }
+  .bell-right { right: 20px !important; top: 48px !important; width: 30px !important; }
+  .hero-content { max-width: 300px !important; width: 100% !important; margin: 0 auto !important; padding-top: 12px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; height: 100% !important; z-index: 10 !important; }
+  .logo { width: 30px !important; margin-bottom: 4px !important; }
+  .shlok { font-size: 11px !important; margin-bottom: 3px !important; color: #8c5a2b !important; }
+  .title { font-size: clamp(24px, 7.5vw, 34px) !important; line-height: 1.1 !important; margin-bottom: 5px !important; text-align: center !important; color: #4a2311 !important; }
+  .subtitle { font-size: 11.5px !important; line-height: 1.3 !important; margin-bottom: 8px !important; text-align: center !important; color: #8c5a2b !important; }
+  .hero-shrine { margin-top: 4px !important; padding-bottom: 10px !important; display: flex !important; justify-content: center !important; align-items: flex-end !important; position: relative !important; z-index: 10 !important; }
+  .murti { width: clamp(160px, 50vw, 210px) !important; max-height: 42vh !important; object-fit: contain !important; filter: drop-shadow(0 12px 24px rgba(91,38,7,0.4)) !important; }
+  .inviter-seal { padding: 20px 12px !important; border-radius: 26px !important; width: 95% !important; }
+  .seal-text { font-size: 0.8rem !important; }
+  .seal-family-name { font-size: 1.05rem !important; margin-bottom: 12px !important; }
+  .seal-message { font-size: 0.8rem !important; line-height: 1.45 !important; }
+  .family-heading { font-size: 0.95rem !important; }
+  .family-heading-wrapper { padding: 8px 12px !important; }
+  .family-heading-wrapper .flourish { width: 30px !important; }
+  .family-heading-wrapper .flourish.left { left: -12px !important; }
+  .family-heading-wrapper .flourish.right { right: -12px !important; }
+  .family-card { width: 85vw !important; max-width: 260px !important; padding: 10px !important; }
+  .member-name span { font-size: 1rem !important; }
+  .aayojan-timeline { max-width: 300px !important; }
+  .aayojan-card { width: 130px !important; padding: 10px 6px !important; border-radius: 12px !important; }
+  .aayojan-card-title { font-size: 0.9rem !important; }
+  .aayojan-card-date { font-size: 0.8rem !important; }
+  .aayojan-card-time { font-size: 0.7rem !important; }
   .memories-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; padding: 0 4px !important; }
   .memory-card { border-radius: 14px !important; }
 }
 
 /* --- 2. STANDARD MOBILE DEVICES (375px to 599px: iPhone 13/14/15, Pixel, Galaxy S) --- */
 @media screen and (min-width: 375px) and (max-width: 599px) {
-  .hero { height: auto !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 20px 10px 30px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
-  .toplayer { width: 130% !important; top: -18px !important; z-index: 50 !important; }
-  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(190px, 48vw, 240px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 15 !important; pointer-events: none !important; }
-  .pillar.left { left: -75px !important; }
-  .pillar.right { right: -75px !important; transform: scaleX(-1) !important; }
-  .bell-left { left: clamp(38px, 11vw, 55px) !important; top: 62px !important; width: 52px !important; }
-  .bell-right { right: clamp(38px, 11vw, 55px) !important; top: 62px !important; width: 48px !important; }
-  .hero-content { max-width: 330px !important; width: 100% !important; margin: 0 auto !important; padding-top: 25px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; text-align: center !important; height: auto !important; z-index: 10 !important; }
-  .logo { width: 42px !important; margin-bottom: 4px !important; }
-  .shlok { font-size: clamp(12.5px, 3.8vw, 16px) !important; margin-bottom: 4px !important; color: #8c5a2b !important; }
-  .title { font-size: clamp(40px, 11.5vw, 56px) !important; line-height: 1.1 !important; margin-bottom: 6px !important; text-align: center !important; color: #4a2311 !important; }
-  .subtitle { font-size: clamp(14px, 4vw, 17px) !important; line-height: 1.4 !important; margin-bottom: 15px !important; text-align: center !important; color: #8c5a2b !important; }
-  .hero-shrine { margin-top: 10px !important; padding-bottom: 10px !important; display: flex !important; justify-content: center !important; align-items: flex-end !important; position: relative !important; z-index: 10 !important; }
-  .murti { width: clamp(230px, 68vw, 300px) !important; max-height: 46vh !important; object-fit: contain !important; filter: drop-shadow(0 15px 30px rgba(91,38,7,0.45)) !important; }
-  .inviter-seal { padding: 30px 20px !important; width: 94% !important; }
-  .family-card { width: 78vw !important; max-width: 300px !important; }
+  .hero { height: auto !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 12px 10px 15px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
+  .toplayer { width: 125% !important; top: -16px !important; z-index: 50 !important; }
+  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(115px, 30vw, 150px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 15 !important; pointer-events: none !important; }
+  .pillar.left { left: -42px !important; }
+  .pillar.right { right: -42px !important; transform: scaleX(-1) !important; }
+  .bell-left { left: 26px !important; top: 54px !important; width: 38px !important; }
+  .bell-right { right: 26px !important; top: 54px !important; width: 34px !important; }
+  .hero-content { max-width: 320px !important; width: 100% !important; margin: 0 auto !important; padding-top: 14px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; text-align: center !important; height: auto !important; z-index: 10 !important; }
+  .logo { width: 32px !important; margin-bottom: 4px !important; }
+  .shlok { font-size: clamp(11.5px, 3.4vw, 14px) !important; margin-bottom: 4px !important; color: #8c5a2b !important; }
+  .title { font-size: clamp(28px, 8vw, 38px) !important; line-height: 1.1 !important; margin-bottom: 5px !important; text-align: center !important; color: #4a2311 !important; }
+  .subtitle { font-size: clamp(12.5px, 3.5vw, 15px) !important; line-height: 1.35 !important; margin-bottom: 8px !important; text-align: center !important; color: #8c5a2b !important; }
+  .hero-shrine { margin-top: 4px !important; padding-bottom: 10px !important; display: flex !important; justify-content: center !important; align-items: flex-end !important; position: relative !important; z-index: 10 !important; }
+  .murti { width: clamp(180px, 52vw, 230px) !important; max-height: 44vh !important; object-fit: contain !important; filter: drop-shadow(0 14px 28px rgba(91,38,7,0.42)) !important; }
+  .inviter-seal { padding: 24px 16px !important; width: 92% !important; border-radius: 28px !important; }
+  .family-card { width: 78vw !important; max-width: 290px !important; }
   .aayojan-timeline { max-width: 95vw !important; }
-  .aayojan-card { width: 44vw !important; padding: 16px 10px !important; }
+  .aayojan-card { width: 44vw !important; padding: 14px 8px !important; }
   .memories-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
 }
 
 /* --- 3. TABLETS & SMALL LAPTOPS (600px to 1023px: iPads, Galaxy Tabs) --- */
 @media screen and (min-width: 600px) and (max-width: 1023px) {
-  .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 25px 20px 20px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
-  .toplayer { width: 115% !important; top: -30px !important; }
-  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(340px, 42vw, 480px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 11 !important; pointer-events: none !important; }
-  .pillar.left { left: clamp(-80px, -8vw, -45px) !important; }
-  .pillar.right { right: clamp(-80px, -8vw, -45px) !important; transform: scaleX(-1) !important; }
-  .bell-left { left: clamp(60px, 8vw, 120px) !important; width: 85px !important; }
-  .bell-right { right: clamp(60px, 8vw, 120px) !important; width: 75px !important; }
-  .hero-content { max-width: 550px !important; width: 100% !important; margin: 0 auto !important; padding-top: 15px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; text-align: center !important; height: 100% !important; z-index: 12 !important; }
-  .title { font-size: clamp(45px, 7vw, 65px) !important; }
-  .subtitle { font-size: clamp(16px, 2.5vw, 20px) !important; }
-  .hero-shrine { margin-top: 10px !important; padding-bottom: 25px !important; }
-  .murti { width: clamp(310px, 44vw, 390px) !important; filter: drop-shadow(0 20px 35px rgba(91,38,7,0.4)) !important; }
-  .inviter-seal { width: 550px !important; padding: 40px 45px !important; }
-  .family-slider { height: 500px !important; }
-  .family-card { width: 320px !important; }
-  .aayojan-timeline { max-width: 520px !important; }
-  .aayojan-card { width: 220px !important; }
+  .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 35px 20px 20px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
+  .toplayer { width: 110% !important; top: -25px !important; }
+  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(200px, 25vw, 280px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 11 !important; pointer-events: none !important; }
+  .pillar.left { left: clamp(-45px, -4vw, -15px) !important; }
+  .pillar.right { right: clamp(-45px, -4vw, -15px) !important; transform: scaleX(-1) !important; }
+  .bell-left { left: clamp(50px, 6vw, 90px) !important; width: 65px !important; }
+  .bell-right { right: clamp(50px, 6vw, 90px) !important; width: 60px !important; }
+  .hero-content { max-width: 500px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; text-align: center !important; height: 100% !important; z-index: 12 !important; }
+  .title { font-size: clamp(34px, 5vw, 44px) !important; }
+  .subtitle { font-size: clamp(14px, 2vw, 17px) !important; }
+  .hero-shrine { margin-top: 0 !important; padding-bottom: 15px !important; }
+  .murti { width: clamp(230px, 32vw, 290px) !important; filter: drop-shadow(0 18px 30px rgba(91,38,7,0.4)) !important; }
+  .inviter-seal { width: 480px !important; padding: 32px 35px !important; }
+  .family-slider { height: 460px !important; }
+  .family-card { width: 300px !important; }
+  .aayojan-timeline { max-width: 500px !important; }
+  .aayojan-card { width: 200px !important; }
   .memories-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 14px !important; }
 }
 
 /* --- 4. DESKTOPS & WIDESCREENS (1024px+ : Laptops, 1080p, 2K, 4K Monitors) --- */
 @media screen and (min-width: 1024px) {
-  .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 30px 40px 20px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
-  .toplayer { width: 110% !important; max-width: 1400px; top: -40px !important; }
-  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(420px, 32vw, 580px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 11 !important; pointer-events: none !important; }
-  .pillar.left { left: clamp(-70px, -4vw, -20px) !important; }
-  .pillar.right { right: clamp(-70px, -4vw, -20px) !important; transform: scaleX(-1) !important; }
-  .bell-left { left: clamp(100px, 12vw, 180px) !important; width: 95px !important; }
-  .bell-right { right: clamp(100px, 12vw, 180px) !important; width: 85px !important; }
-  .hero-content { max-width: 750px !important; width: 100% !important; margin: 0 auto !important; padding-top: 15px !important; display: flex !important; flex-direction: column !important; justify-content: flex-start !important; align-items: center !important; text-align: center !important; height: 100% !important; z-index: 12 !important; }
-  .title { font-size: clamp(55px, 5vw, 85px) !important; }
-  .subtitle { font-size: clamp(18px, 1.8vw, 24px) !important; }
-  .hero-shrine { margin-top: 10px !important; padding-bottom: 25px !important; }
-  .murti { width: clamp(350px, 30vw, 450px) !important; filter: drop-shadow(0 25px 45px rgba(91,38,7,0.45)) !important; }
-  .inviter-seal { width: 640px !important; padding: 45px 60px !important; }
-  .family-slider { height: 520px !important; width: 560px; margin: 0 auto; }
-  .family-card { width: 340px !important; }
-  .aayojan-timeline { max-width: 600px !important; }
-  .aayojan-card { width: 250px !important; }
-  .memories-grid { grid-template-columns: repeat(3, 1fr) !important; max-width: 850px; gap: 18px !important; }
+  .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 35px 40px 25px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
+  .toplayer { width: 105% !important; max-width: 1250px; top: -30px !important; }
+  .pillar { position: absolute !important; top: 0 !important; bottom: 0 !important; height: 100% !important; width: clamp(240px, 20vw, 340px) !important; object-fit: cover !important; object-position: bottom left !important; z-index: 11 !important; pointer-events: none !important; }
+  .pillar.left { left: clamp(-30px, -2vw, 0px) !important; }
+  .pillar.right { right: clamp(-30px, -2vw, 0px) !important; transform: scaleX(-1) !important; }
+  .bell-left { left: clamp(80px, 9vw, 130px) !important; width: 75px !important; }
+  .bell-right { right: clamp(80px, 9vw, 130px) !important; width: 70px !important; }
+  .hero-content { max-width: 620px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; text-align: center !important; height: 100% !important; z-index: 12 !important; }
+  .title { font-size: clamp(40px, 4vw, 56px) !important; }
+  .subtitle { font-size: clamp(15px, 1.5vw, 19px) !important; }
+  .hero-shrine { margin-top: 0 !important; padding-bottom: 18px !important; }
+  .murti { width: clamp(250px, 22vw, 330px) !important; filter: drop-shadow(0 20px 35px rgba(91,38,7,0.45)) !important; }
+  .inviter-seal { width: 540px !important; padding: 35px 45px !important; }
+  .family-slider { height: 480px !important; width: 520px; margin: 0 auto; }
+  .family-card { width: 320px !important; }
+  .aayojan-timeline { max-width: 550px !important; }
+  .aayojan-card { width: 230px !important; }
+  .memories-grid { grid-template-columns: repeat(3, 1fr) !important; max-width: 800px; gap: 16px !important; }
 }
 
 /* Reduced Spacing After Memories Section */

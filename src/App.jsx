@@ -13,16 +13,29 @@ export default function App() {
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
 
   const bgAudioRef = useRef(null);
+  const playCountRef = useRef(0);
   const bellAudioCtxRef = useRef(null);
 
   useEffect(() => {
-    bgAudioRef.current = new Audio('/assets/bgMusic-Cx9Z66jg.mp3');
-    bgAudioRef.current.loop = true;
+    const audio = new Audio('/assets/bgMusic-Cx9Z66jg.mp3');
+    audio.loop = false;
+    bgAudioRef.current = audio;
+
+    const handleEnded = () => {
+      playCountRef.current += 1;
+      if (playCountRef.current < 2) {
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      } else {
+        setIsAudioPlaying(false);
+      }
+    };
+
+    audio.addEventListener('ended', handleEnded);
 
     return () => {
-      if (bgAudioRef.current) {
-        bgAudioRef.current.pause();
-      }
+      audio.removeEventListener('ended', handleEnded);
+      audio.pause();
     };
   }, []);
 
@@ -33,8 +46,9 @@ export default function App() {
   const handleOpenCurtain = () => {
     setIsCurtainOpen(true);
     setIsAudioPlaying(true);
-    playBellSound();
+    playCountRef.current = 0;
     if (bgAudioRef.current) {
+      bgAudioRef.current.currentTime = 0;
       bgAudioRef.current.play().catch(() => {});
     }
   };
@@ -45,9 +59,10 @@ export default function App() {
       bgAudioRef.current.pause();
       setIsAudioPlaying(false);
     } else {
+      playCountRef.current = 0;
+      bgAudioRef.current.currentTime = 0;
       bgAudioRef.current.play().catch(() => {});
       setIsAudioPlaying(true);
-      playBellSound();
     }
   };
 

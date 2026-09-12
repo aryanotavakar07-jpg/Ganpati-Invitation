@@ -205,9 +205,9 @@ html, body { width: 100%; max-width: 100vw; overflow-x: hidden !important; margi
 @media screen and (max-width: 374px) {
   .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 25px 8px 15px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
   .toplayer { width: 140% !important; top: -15px !important; }
-  .pillar { position: absolute !important; top: 0 !important; height: 100% !important; max-height: 100vh !important; width: clamp(100px, 32vw, 150px) !important; object-fit: contain !important; object-position: top left !important; z-index: 11 !important; pointer-events: none !important; }
-  .pillar.left { left: -32px !important; }
-  .pillar.right { right: -32px !important; transform: scaleX(-1) !important; }
+  .pillar { position: absolute !important; top: -10px !important; height: clamp(540px, 82vh, 680px) !important; width: clamp(140px, 45vw, 195px) !important; object-fit: fill !important; z-index: 11 !important; pointer-events: none !important; }
+  .pillar.left { left: -45px !important; }
+  .pillar.right { right: -45px !important; transform: scaleX(-1) !important; }
   .bell-left { left: 10px !important; width: 36px !important; }
   .bell-right { right: 10px !important; width: 32px !important; }
   .hero-content { max-width: 310px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; height: 100% !important; z-index: 12 !important; }
@@ -241,9 +241,9 @@ html, body { width: 100%; max-width: 100vw; overflow-x: hidden !important; margi
 @media screen and (min-width: 375px) and (max-width: 599px) {
   .hero { height: 100vh !important; height: 100dvh !important; min-height: 100vh !important; min-height: 100dvh !important; padding: 30px 10px 20px !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; overflow: hidden !important; position: relative !important; }
   .toplayer { width: 130% !important; top: -18px !important; }
-  .pillar { position: absolute !important; top: 0 !important; height: 100% !important; max-height: 100vh !important; width: clamp(110px, 34vw, 165px) !important; object-fit: contain !important; object-position: top left !important; z-index: 11 !important; pointer-events: none !important; }
-  .pillar.left { left: -36px !important; }
-  .pillar.right { right: -36px !important; transform: scaleX(-1) !important; }
+  .pillar { position: absolute !important; top: -10px !important; height: clamp(620px, 86vh, 760px) !important; width: clamp(155px, 46vw, 215px) !important; object-fit: fill !important; z-index: 11 !important; pointer-events: none !important; }
+  .pillar.left { left: -50px !important; }
+  .pillar.right { right: -50px !important; transform: scaleX(-1) !important; }
   .bell-left { left: 16px !important; width: 44px !important; }
   .bell-right { right: 16px !important; width: 40px !important; }
   .hero-content { max-width: 330px !important; width: 100% !important; margin: 0 auto !important; padding: 0 !important; display: flex !important; flex-direction: column !important; justify-content: space-between !important; align-items: center !important; text-align: center !important; height: 100% !important; z-index: 12 !important; }

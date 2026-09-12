@@ -30,7 +30,7 @@ export default function Hero({ onPlayBell, isCurtainOpen }) {
 
         {/* Hanging Bells */}
         <img
-          src="/assets/bell-DxDhDReW.webp"
+          src="/assets/bell-2-CjaksJjB.webp"
           alt=""
           className={`bell bell-left hero-anim-bell${p}`}
           loading="eager"

@@ -21,16 +21,6 @@ export default function Footer() {
       <div className="footer-morya scroll-reveal-child" style={{ marginTop: '20px', marginBottom: '25px', fontSize: '1.4rem' }}>
         ॥ सर्वांचं स्वागत आहे ॥
       </div>
-      <div className="footer-brand scroll-reveal-child">
-        <a
-          href="https://www.instagram.com/invi.digitals"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: 'inherit', textDecoration: 'none' }}
-        >
-          Crafted by INVI DIGITALS
-        </a>
-      </div>
     </footer>
   );
 }

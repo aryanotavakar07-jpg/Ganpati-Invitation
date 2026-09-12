@@ -6,37 +6,34 @@ export default function Curtain({ isOpen, onOpen, onOpenStart }) {
   const [shouldRender, setShouldRender] = useState(true);
 
   useEffect(() => {
-    if (shouldRender && !isOpening) {
-      document.body.style.overflow = 'hidden';
-      document.documentElement.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     }
-    return () => {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
-    };
-  }, [shouldRender, isOpening]);
+  }, []);
 
   const handleOpen = () => {
     setIsOpening(true);
     if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      window.scrollTo(0, 0);
       document.documentElement.scrollTop = 0;
       document.body.scrollTop = 0;
     }
     if (onOpenStart) onOpenStart();
     if (onOpen) onOpen();
 
-    // Unlock scroll as curtain slides open
     setTimeout(() => {
-      document.body.style.overflow = '';
-      document.documentElement.style.overflow = '';
       if (typeof window !== 'undefined') {
-        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        window.scrollTo(0, 0);
         document.documentElement.scrollTop = 0;
         document.body.scrollTop = 0;
+      }
+    }, 100);
+
+    setTimeout(() => {
+      if (typeof window !== 'undefined') {
+        window.scrollTo(0, 0);
       }
     }, 800);
 

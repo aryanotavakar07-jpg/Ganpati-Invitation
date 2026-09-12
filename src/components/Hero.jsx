@@ -68,10 +68,11 @@ export default function Hero({ onPlayBell, isCurtainOpen }) {
 
           <div className={`hero-shrine hero-anim-murti${p}`}>
             <img
-              src="/assets/murti-DogDNfqS.webp"
+              src="/assets/user_ganpati_idol.png"
               alt="गणपती बाप्पा"
               className="murti"
               loading="eager"
+              style={{ filter: 'drop-shadow(0 15px 30px rgba(91,38,7,0.45))' }}
             />
           </div>
         </div>
